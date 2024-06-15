@@ -27,5 +27,6 @@ model Colaborador {
   name  String
   email String @unique
   tickets Ticket[]
+  senha String
   permissao Int
 }
