@@ -1,0 +1,33 @@
+{
+  "name": "avaliacao-candidatos",
+  "version": "1.0.0",
+  "description": "- Documente\r - Mostre a sua linha de reciocínio\r - Trabalhe bem o seu README.md\r ### Como você deverá desenvolver?\r 1. Faça o fork deste projeto\r 2. Realize as implementações de acordo com cada um dos níveis\r 3. Faça pequenos commits\r 4. Depois de sentir que fez o seu máximo, faça um PR para o repositório original.\r **OBSERVAÇÃO** : Faça até o nível que se sentir confortável.\r ### Prazo de entrega\r Quanto mais cedo você enviar, mais tempo teremos para revisar seu teste com atenção. Sabemos que a rotina é agitada, por isso, faça no seu ritmo. Não desista! Envie o que conseguir.\r ##  O Problema\r O stakeholder da Comigotech solicitou uma nova funcionalidade para o gerenciamento de tickets.\r Diariamente, nossa equipe precisa lidar com um grande volume de tickets, e o processo manual estava deixando todos sobrecarregados!\r Os tickets são registros digitais de solicitações, processos e problemas a serem resolvidos. Para a Comigotech, é essencial integrar essas informações no fluxo de trabalho para atender nossos clientes de forma eficiente.\r ## Back-end\r ### Nível 1 - Validação\r Implemente uma API utilizando ExpressJS que receba dados de um ticket.\r Se algum campo não estiver preenchido corretamente, deve-se retornar uma mensagem para o usuário mostrando qual o problema foi encontrado em qual campo.\r Se todos os dados estiverem validados. Apenas retorne todos os dados em um formato JSON.\r ### Nível 2 - Persistência\r Utilize o banco de dados PostgreSQL e o ORM prisma.\r Crie a estrutura para o armazenamento dos tickets e colaboradores. (Onde os colaboradores estarão vinculados aos tickets que são criados, editados e deletados)\r Caso os dados estejam válidos, cadastre-os.\r Inclua também rotas para as outras operações:\r - Edição;\r - Exclusão;\r - Consulta;\r ### Nível 3 - Autenticação\r Inclua um sistema de autenticação com JWT em todas as rotas.\r ### Nível 4 - Gerenciamento de permissões\r Agora, crie um sistema de gerenciamento de permissões.\r Crie um novo cadastro de permissões. Esse cadastro deve armazenar: `login` e `password`.\r Os cargos são: `Admin` e `Atendente` onde o Admin será permissão para excluir os tickets.\r ### Nível 5 - Testes\r Crie testes unitários, utilizando Jest ou Vitest, para cada operação. Para cada nova implementação a seguir, também deve-se criar os testes.\r Refatore o endpoint de autenticação para que sempre se gere JWTs se login e senha estiverem cadastrados no Banco de Dados.\r ### Nível 6 - Infra\r Crie um `Dockerfile` para sua API.\r Crie um `docker-compose.yaml` para iniciar o seu projeto.\r Documente tudo o que foi feito até aqui:\r - Como preparar o ambiente;\r - Como instalar as dependência;\r - Como rodar o projeto;\r ### Nível 7 - Cloud\r Crie uma pipeline de deploy da aplicação em alguma estrutura de Cloud. (AWS ou Google)\r ## Front-end\r ### Nível 1 - Cadastro\r Crie a interface utilizando React com tailwind para cadastro dos tickets.\r É importante que sua interface previna o cadastro de campos vazios, ou que não estejam nas regras definidas anteriormente.\r ### Nível 2 - Conectando na API\r Conecte a seu Front-end a API que foi criada, e faça o cadastro de um ticket refletir na sua API.\r ### Nível 3 - Listando\r Agora faça um sistema de listagens de tickets.\r Além disso, coloque opções de editar e excluir (de acordo com o cargo do usuário).\r Todos os dados devem vir da API.\r ### Nível 4 - Autenticação\r Implemente agora o sistema de login e senha para o usuário poder acessar apenas as suas permissões autenticadas.\r Caso o token expire, redirecione o usuário para a página de login.\r ### Nível 5 - Testes\r Crie testes para sua aplicação Front-end.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LuizAnthonio/avaliacao-candidatos.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LuizAnthonio/avaliacao-candidatos/issues"
+  },
+  "homepage": "https://github.com/LuizAnthonio/avaliacao-candidatos#readme",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "prisma": "^5.15.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.15.0",
+    "axios": "^1.7.2",
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "postgresql": "^0.0.1"
+  }
+}
