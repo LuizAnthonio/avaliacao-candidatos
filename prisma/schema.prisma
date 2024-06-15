@@ -18,13 +18,14 @@ model Ticket {
   id          Int       @id @default(autoincrement())
   title       String
   description String
-  assignedTo  Collaborator @relation(fields: [assignedToId], references: [id])
+  assignedTo  Colaborador @relation(fields: [assignedToId], references: [id])
   assignedToId Int
 }
 
-model Collaborator {
+model Colaborador {
   id    Int    @id @default(autoincrement())
   name  String
   email String @unique
   tickets Ticket[]
+  permissao Int
 }

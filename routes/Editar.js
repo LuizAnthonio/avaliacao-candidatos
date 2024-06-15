@@ -29,7 +29,7 @@ router.post("/ticket", async (req,res) => {
 router.post("/cliente", async (req,res) => {
 
     try {
-      const collaborator = await prisma.collaborator.create({});
+      const collaborator = await prisma.colaborador.create({});
 
       res.status(200).json(collaborator);
     } catch (error) {

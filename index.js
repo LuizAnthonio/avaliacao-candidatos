@@ -21,23 +21,6 @@ app.use("/editar",editar);
 app.use("/excluir",excluir);
 
 
-app.post("/", async (req,res) => {
-
-
-
-  try {
-    const tickets = await prisma.ticket.findMany({
-      include: {
-        assignedTo: true, 
-      },
-    });
-    res.status(200).json(tickets);
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
-
-
-})
 
 
 const PORT = 8000;

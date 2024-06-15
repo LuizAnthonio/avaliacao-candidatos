@@ -26,12 +26,12 @@ router.get("/tickets", async (req,res) => {
     
   });
 
-  
+
 
 router.get("/clientes", async (req,res) => {
 
     try {
-      const collaborator = await prisma.collaborator.findMany({});
+      const collaborator = await prisma.colaborador.findMany({});
 
       res.status(200).json(collaborator);
     } catch (error) {

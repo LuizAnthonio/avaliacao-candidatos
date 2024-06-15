@@ -26,12 +26,20 @@ router.post("/ticket", async (req,res) => {
 
   
 
-router.post("/cliente", async (req,res) => {
+router.post("/colaborador", async (req,res) => {
 
+    const {nome,email,ticket,permissao} = req.body
+
+    console.log(nome,email,ticket,permissao)
     try {
-      const collaborator = await prisma.collaborator.create({});
+      const colaborador = await prisma.colaborador.create({
+        name:nome,
+        email:email,
+        tickets:ticket,
+        permissao:permissao
+      });
 
-      res.status(200).json(collaborator);
+      res.status(200).json(colaborador);
     } catch (error) {
       res.status(500).json({ error: error.message });
     }
