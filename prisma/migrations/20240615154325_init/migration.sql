@@ -1,0 +1,5 @@
+-- AddForeignKey
+ALTER TABLE "Ticket" ADD CONSTRAINT "Ticket_tipoId_fkey" FOREIGN KEY ("tipoId") REFERENCES "Tipos"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
+
+-- AddForeignKey
+ALTER TABLE "Ticket" ADD CONSTRAINT "Ticket_motivoId_fkey" FOREIGN KEY ("motivoId") REFERENCES "Motivos"("id") ON DELETE RESTRICT ON UPDATE CASCADE;
