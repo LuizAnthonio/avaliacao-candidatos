@@ -14,7 +14,6 @@ Diariamente, nossa equipe precisa lidar com um grande volume de tickets, e o pro
 Os tickets são registros digitais de solicitações, processos e problemas a serem resolvidos. Para a Comigotech, é essencial integrar essas informações no fluxo de trabalho para atender nossos clientes de forma eficiente.
 
 
-## Rotas da API
 
 
 ## Imagens do Projeto
@@ -24,4 +23,12 @@ De um ponto de vista geral essas são as pastas do projeto, foram pensadas para 
 
 ![alt text](image.png)
 
-Arquivo ´Index.js´ que é o core da API
+Arquivo `index.js` que é o core da API o servidor propriamente dito.
+
+![alt text](image-1.png)
+
+Do Prisma e suas tabelas
+
+![alt text](image-2.png)
+
+## Rotas da API

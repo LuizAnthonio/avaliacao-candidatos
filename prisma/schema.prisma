@@ -13,7 +13,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 model Ticket {
   id          Int       @id @default(autoincrement())
   title       String
@@ -31,8 +30,6 @@ model Ticket {
   dataAbertura DateTime
   prazo DateTime
   status Int
-
-
 
 }
 
