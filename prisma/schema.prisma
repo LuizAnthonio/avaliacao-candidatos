@@ -20,10 +20,14 @@ model Ticket {
   description String
   assignedTo  Colaborador @relation(fields: [assignedToId], references: [id])
   assignedToId Int
+  cliente Clientes  @relation(fields: [clienteId], references: [id])
+  clienteId Int
   tipo Tipos  @relation(fields: [tipoId], references: [id])
   tipoId Int
   motivo  Motivos @relation(fields: [motivoId], references: [id])
   motivoId Int
+  veiculo Veiculos @relation(fields: [veiculoId], references: [id])
+  veiculoId Int
   dataAbertura DateTime
   prazo DateTime
   status Int
@@ -31,6 +35,15 @@ model Ticket {
 
 
 }
+
+model Clientes {
+  id Int @id @default(autoincrement())
+  name  String
+  email String @unique
+  telefone String @unique
+  tickets Ticket[] 
+}
+
 
 model Motivos {
   id Int @id @default(autoincrement())
@@ -50,6 +63,7 @@ model Veiculos {
   id Int @id @default(autoincrement())
   veiculo String
   descricao String
+  tickets Ticket[] @relation()
 
 }
 

@@ -80,7 +80,9 @@ router.get("/tickets", async (req,res) => {
         include: {
           assignedTo: true,
           motivo: true,
-          tipo:true 
+          tipo:true, 
+          cliente:true,
+          veiculo:true
         },
       });
 
@@ -187,6 +189,63 @@ router.get("/colaboradores", async (req,res) => {
     
   });
 
+router.get("/clientes", async (req,res) => {
+
+    try {
+
+      const cookie = req.cookies['jwt']
+
+      const requisicao = jwt.verify(cookie,"segredinho");
+
+      if(!requisicao){
+        return res.status(401).json({
+          message:"naoautenticado"
+        })
+      }
+
+      const clientes = await prisma.clientes.findMany({});
+
+      
+
+      res.status(200).json(clientes);
+    } catch (error) {
+      res.status(500).json({ 
+        message:"naoautenticado",
+        err:error
+      });
+    }
+  
+    
+  });
+  
+  router.get("/veiculos", async (req,res) => {
+  
+      try {
+  
+        const cookie = req.cookies['jwt']
+  
+        const requisicao = jwt.verify(cookie,"segredinho");
+  
+        if(!requisicao){
+          return res.status(401).json({
+            message:"naoautenticado"
+          })
+        }
+  
+        const veiculos = await prisma.veiculos.findMany({});
+  
+        
+  
+        res.status(200).json(veiculos);
+      } catch (error) {
+        res.status(500).json({ 
+          message:"naoautenticado",
+          err:error
+        });
+      }
+    
+      
+    });
 
 router.get("/colaborador", async (req,res) => {
 
@@ -195,7 +254,7 @@ router.get("/colaborador", async (req,res) => {
 
       const requisicao = jwt.verify(cookie,"segredinho");
       
-      
+      console.log(requisicao)
 
       if(!requisicao){
         return res.status(401).json({
@@ -211,16 +270,12 @@ router.get("/colaborador", async (req,res) => {
       const {senha:senha,...dadosColab} = userColab;
 
 
-
-
-
-
       res.status(200).json(dadosColab);
 
 
 
     } catch (error) {
-      return res.status(401).json({
+      res.status(401).json({
         message:"naoautenticado",
         err:error
       })
