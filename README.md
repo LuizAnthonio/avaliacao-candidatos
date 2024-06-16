@@ -190,7 +190,7 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 500: Erro no servidor, retorna a mensagem de erro.
 
 
-![alt text](UpdateBanner.png)
+![alt text](updateBanner.png)
 
 ### /ticket/:id
 - **Descrição**: Atualiza as informações de um ticket específico com base no ID fornecido.
@@ -233,4 +233,3 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 500: Erro no servidor, retorna a mensagem de erro.
 
 
-  
