@@ -52,12 +52,16 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+---
+
 ### /tipos
 - **Descrição**: Retorna uma lista de todos os tipos.
 - **Response**:
   - 200: Sucesso, retorna a lista de tipos.
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+---
 
 ### /motivos
 - **Descrição**: Retorna uma lista de todos os motivos.
@@ -66,12 +70,16 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+---
+
 ### /colaboradores
 - **Descrição**: Retorna uma lista de todos os colaboradores.
 - **Response**:
   - 200: Sucesso, retorna a lista de colaboradores.
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+---
 
 ### /clientes
 - **Descrição**: Retorna uma lista de todos os clientes.
@@ -80,6 +88,8 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+---
+
 ### /veiculos
 - **Descrição**: Retorna uma lista de todos os veículos.
 - **Response**:
@@ -87,12 +97,17 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+---
+
 ### /colaborador
 - **Descrição**: Retorna as informações do colaborador autenticado.
 - **Response**:
   - 200: Sucesso, retorna as informações do colaborador.
   - 401: Não autenticado, token JWT inválido ou ausente.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+
+---
 
 ### /ticket/:id
 - **Descrição**: Retorna as informações de um ticket específico com base no ID fornecido.
@@ -103,6 +118,7 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
 - **Response**:
   - 200: Sucesso, retorna os dados do ticket consultado.
   - 401: Não autenticado, token JWT inválido ou ausente.
+
 
 
 ![alt text](PostBanner.png)
@@ -118,11 +134,15 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 404: Usuário não encontrado ou senha inválida.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+---
+
   ### /logout
 - **Descrição**: Realiza o logout do usuário, invalidando o token JWT.
 - **Response**:
   - 200: Sucesso, retorna uma mensagem de logout bem-sucedido.
 
+
+---
 
   ### /ticket
 - **Descrição**: Cria um novo ticket com as informações fornecidas.
@@ -141,6 +161,9 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 200: Sucesso, retorna os dados do ticket criado.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+
+---
+
 ### /motivo
 - **Descrição**: Cria um novo motivo.
 - **Request Body**:
@@ -149,6 +172,9 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
 - **Response**:
   - 200: Sucesso, retorna os dados do motivo criado.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+
+---
 
 ### /cliente
 - **Descrição**: Cria um novo cliente.
@@ -160,6 +186,9 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 200: Sucesso, retorna os dados do cliente criado.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+
+---
+
 ### /veiculo
 - **Descrição**: Cria um novo veículo.
 - **Request Body**:
@@ -169,6 +198,9 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 200: Sucesso, retorna os dados do veículo criado.
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+
+---
+
 ### /tipo
 - **Descrição**: Cria um novo tipo.
 - **Request Body**:
@@ -177,6 +209,9 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
 - **Response**:
   - 200: Sucesso, retorna os dados do tipo criado.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+
+---
 
 ### /colaborador
 - **Descrição**: Cria um novo colaborador com senha criptografada.
@@ -189,6 +224,8 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 200: Sucesso, retorna os dados do colaborador criado (exceto a senha).
   - 500: Erro no servidor, retorna a mensagem de erro.
 
+
+---
 
 ![alt text](updateBanner.png)
 
@@ -220,6 +257,10 @@ Estas são as rotas disponíveis para a API. Utilize a URL base acima com as seg
   - 200: Sucesso, retorna uma mensagem de exclusão e os dados do ticket excluído.
   - 401: Não autenticado, token JWT inválido ou ausente, ou permissão negada.
   - 500: Erro no servidor, retorna a mensagem de erro.
+
+
+---
+
 
 ### /colaborador/:id
 - **Descrição**: Exclui um colaborador específico com base no ID fornecido. Requer permissões de administrador.
