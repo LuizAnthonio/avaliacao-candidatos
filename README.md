@@ -21,6 +21,7 @@ Os tickets são registros digitais de solicitações, processos e problemas a se
 
 ## Organização do Código (Arquitetura)
 De um ponto de vista geral essas são as pastas do projeto, foram pensadas para a facilidade de manutenção.
+
 ![alt text](image.png)
 
 Arquivo ´Index.js´ que é o core da API
